@@ -22,7 +22,7 @@ environment:
   au_test_groups: 4
 
   # Github token to commit pushed packages to repository
-  github_user_repo: tunisiano187/Chocolatey-packages
+  github_user_repo: tunisiano187/Chocolatey-packages1
   github_api_key:
     secure: k80gVFMer6/9wd07GMUlUXKjJx0iLLAlENh1RoBB9vMbpD/OZCA3aWPiZpsW3HYk52D/3qDcWCZRWjH9SFklaDBEkX6fl/oOpAOwUcz2auuSAdVtg0WO1VZqCdw/5ukT
 
@@ -179,7 +179,7 @@ build_script:
         }
     }
     #git remote set-url origin https://$($env:gitlab_user):$($env:gitlab_api_key)@gitlab.com/chocolatey-packages/automatic-updating.git
-    git remote set-url origin https://$($env:github_api_key)@github.com/tunisiano187/Chocolatey-packages.git
+    git remote set-url origin https://$($env:github_api_key)@github.com/tunisiano187/Chocolatey-packages1.git
     git config --global user.email "helpdesk.choc@gmail.com"
     git config --global user.name "tunisiano187"
     git checkout master
@@ -193,13 +193,13 @@ build_script:
     scripts/Find-NuspecError.ps1
     git commit -am "Nuspec errors"
     Write-Host "updating packageSourceUrl"
-    scripts/Update-PackageSourceUrl.ps1 -GithubRepository "tunisiano187/Chocolatey-packages" -UseStopwatch
+    scripts/Update-PackageSourceUrl.ps1 -GithubRepository "tunisiano187/Chocolatey-packages1" -UseStopwatch
     git commit -am "PackageSourceUrl"
     Write-Host "updating variables in ps1"
     scripts/Update-Variables.ps1
     git commit -am "ps1 vars"
     Write-Host "updating IconUrl in nuspec"
-    scripts/Update-IconUrl.ps1 -Quiet -GithubRepository "tunisiano187/Chocolatey-packages" -UseStopwatch
+    scripts/Update-IconUrl.ps1 -Quiet -GithubRepository "tunisiano187/Chocolatey-packages1" -UseStopwatch
     git commit -am "Updating icons"
     Write-Host "updating owners in nuspec"
     import-module Wormies-AU-Helpers

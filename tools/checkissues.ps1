@@ -5,7 +5,7 @@ Write-Output "search: $search"
 $page = Invoke-WebRequest -Uri "https://community.chocolatey.org/packages/$($search)" -UseBasicParsing
 if($page.Links | Where-Object {$_.href -match 'tunisiano'}) {
     Write-Output "tunisiano is maintainer"
-    if($page.Links | Where-Object {$_.href -match 'tunisiano187/Chocolatey-packages'}) {
+    if($page.Links | Where-Object {$_.href -match 'tunisiano187/Chocolatey-packages1'}) {
         Write-Output "package published"
         Install-Module -Name PowerShellForGitHub -Force
         Import-Module PowerShellForGitHub
