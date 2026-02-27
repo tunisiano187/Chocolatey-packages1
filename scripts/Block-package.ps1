@@ -38,7 +38,7 @@ function Block-Package {
     Set-GitHubConfiguration -DisableTelemetry
 
     [string]$Owner = "tunisiano187"
-    [string]$Repository = "Chocolatey-packages"
+    [string]$Repository = "Chocolatey-packages1"
 
     Write-Output "number : $issueNumber"
     Write-Output "Title : $title"

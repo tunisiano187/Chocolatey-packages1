@@ -5,7 +5,7 @@ if(!(Test-Path Env:github_api_key)) {
     $Env:github_api_key   = $Github_personal_token          #Github personal access token
 }
 [string]$Owner = "tunisiano187"
-[string]$Repository = "Chocolatey-packages"
+[string]$Repository = "Chocolatey-packages1"
 
 Write-Output "Search the next package to import"
 $search = (Get-GitHubIssue -OwnerName $Owner -RepositoryName $Repository -State Open -Label "ToCreateManualy" | Sort-Object -Property IssueNumber).Title.split('(|)')[1]
