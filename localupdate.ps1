@@ -1,4 +1,4 @@
-﻿Set-Location C:\Users\fabia\Documents\Git\Chocolatey-package\Chocolatey-packages\
+﻿Set-Location C:\Users\fabia\Documents\Git\Chocolatey-package\Chocolatey-packages1\
 
 # Nom partiel de l'interface réseau que vous voulez surveiller
 $interfaceNameFilter = "netxtreme gigabit ethernet _3"
