@@ -3,7 +3,7 @@ name: SonarQube Analysis
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
     types: [ opened, synchronize, reopened ]
 
@@ -21,6 +21,6 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.projectKey=tunisiano187_Chocolatey-packages
+          -Dsonar.projectKey=tunisiano187_Chocolatey-packages1
           -Dsonar.organization=tunisiano187
           -Dsonar.sources=.
