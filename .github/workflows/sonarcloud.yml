@@ -21,6 +21,6 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       with:
         args: >
-          -Dsonar.projectKey=tunisiano187_Chocolatey-packages11
+          -Dsonar.projectKey=tunisiano187_Chocolatey-packages111
           -Dsonar.organization=tunisiano187
           -Dsonar.sources=.
