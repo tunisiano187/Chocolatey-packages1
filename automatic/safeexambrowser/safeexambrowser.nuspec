@@ -16,7 +16,7 @@
     <copyright>Copyright 2010-2024 ETH Zurich, IT Services</copyright>
     <tags>exams testing security</tags>
     <projectSourceUrl>https://github.com/SafeExamBrowser/seb-win-refactoring</projectSourceUrl>
-    <packageSourceUrl>https://github.com/DanielWahlgren/chocolatey-packages/tree/master/safeexambrowser</packageSourceUrl>
+    <packageSourceUrl>https://github.com/tunisiano187/Chocolatey-packages1/tree/master/automatic/safeexambrowser</packageSourceUrl>
     <docsUrl>https://safeexambrowser.org/about_overview_en.html</docsUrl>
     <dependencies>
       <dependency id="netfx-4.8" version="4.8.0.20220524" />
