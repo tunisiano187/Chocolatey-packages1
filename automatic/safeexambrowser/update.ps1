@@ -1,4 +1,4 @@
-﻿import-module Chocolatey-AU
+import-module Chocolatey-AU
 
 $releases = 'https://github.com/SafeExamBrowser/seb-win-refactoring/releases'
 
@@ -17,11 +17,11 @@ function global:au_SearchReplace {
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases
 
-    $version = $download_page.Links | ? href -like '*releases/tag*' | % href | select -First 1
+    $version = $download_page.Links | ? href -like '*releases/tag*' | ForEach-Object href | select -First 1
     $version = Split-Path $version -Leaf
     $download_page = Invoke-WebRequest -Uri ($releases + '/expanded_assets/' + $version)
-    $url64 = $download_page.Links | ? href -match '.x64_Setup.msi$' | % href | select -First 1
-    $url32 = $download_page.Links | ? href -match '.x86_Setup.msi$' | % href | select -First 1
+    $url64 = $download_page.Links | ? href -match '.x64_Setup.msi$' | ForEach-Object href | select -First 1
+    $url32 = $download_page.Links | ? href -match '.x86_Setup.msi$' | ForEach-Object href | select -First 1
     $version = (Split-Path ( Split-Path $url32 ) -Leaf).Substring(1)
 
     @{
