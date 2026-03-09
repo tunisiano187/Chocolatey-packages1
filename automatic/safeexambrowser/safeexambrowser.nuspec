@@ -5,7 +5,7 @@
     <version>3.9.0</version>
     <title>SafeExamBrowser</title>
     <authors>ETH Zurich</authors>
-    <owners>DanielWahlgren-Eventful</owners>
+    <owners>tunisiano</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/SafeExamBrowser/seb-win-refactoring/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/SafeExamBrowser/seb-win-refactoring</projectUrl>
