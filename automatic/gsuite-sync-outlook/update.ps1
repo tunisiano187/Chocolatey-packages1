@@ -17,6 +17,15 @@ function global:au_SearchReplace {
 	}
 }
 
+function global:au_BeforeUpdate {
+	. ..\..\scripts\Get-FileVersion.ps1
+	$FileInfo = Get-FileVersion $url32
+	$FileInfo64 = Get-FileVersion $url64
+	$Latest.Checksum32 = $FileInfo.Checksum
+	$Latest.ChecksumType32 = $FileInfo.ChecksumType
+	$Latest.Checksum64 = $FileInfo64.Checksum
+	$Latest.ChecksumType64 = $FileInfo64.ChecksumType
+}
 
 function global:au_AfterUpdate($Package) {
 	Invoke-VirusTotalScan $Package
@@ -30,11 +39,9 @@ function global:au_GetLatest {
 
 	$url32 = "https://dl.google.com/google-apps-sync/enterprise_gsync.msi"
 	$url64 = "https://dl.google.com/dl/google-apps-sync/x64/enterprise_gsync.msi"
-	. ..\..\scripts\Get-FileVersion.ps1
-	$FileInfo = Get-FileVersion $url32
-	$FileInfo64 = Get-FileVersion $url64
+	
 
-	$Latest = @{ URL32 = $url32; Version = $version; Checksum32 = $FileInfo.Checksum; ChecksumType32 = $FileInfo.ChecksumType; URL64 = $url64; Checksum64 = $FileInfo64.Checksum; ChecksumType64 = $FileInfo.ChecksumType }
+	$Latest = @{ URL32 = $url32; Version = $version }
 	return $Latest
 }
 
