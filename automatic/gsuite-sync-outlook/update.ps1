@@ -39,7 +39,7 @@ function global:au_GetLatest {
 
 	$url32 = "https://dl.google.com/google-apps-sync/enterprise_gsync.msi"
 	$url64 = "https://dl.google.com/dl/google-apps-sync/x64/enterprise_gsync.msi"
-	
+
 
 	$Latest = @{ URL32 = $url32; Version = $version }
 	return $Latest
