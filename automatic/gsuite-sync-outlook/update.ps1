@@ -19,8 +19,8 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate {
 	. ..\..\scripts\Get-FileVersion.ps1
-	$FileInfo = Get-FileVersion $url32
-	$FileInfo64 = Get-FileVersion $url64
+	$FileInfo = Get-FileVersion $Latest.URL32
+	$FileInfo64 = Get-FileVersion $Latest.URL64
 	$Latest.Checksum32 = $FileInfo.Checksum
 	$Latest.ChecksumType32 = $FileInfo.ChecksumType
 	$Latest.Checksum64 = $FileInfo64.Checksum
