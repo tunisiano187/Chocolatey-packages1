@@ -32,7 +32,7 @@ function global:au_GetLatest {
 	# actually serves kept moving forward with every new DeepL release, so every install eventually
 	# downloaded a newer build than the checksum on file (confirmed: chocolatey.org is still on
 	# 26.1.1.19426 while the live feed's newest entry is 26.11.1.21905, issue #100). Use a
-	# namespace-aware XPath for "implementation anywhere in the document" instead of a fixed depth,
+	# namespace-aware XPath for "implementation anyWhere-Object in the document" instead of a fixed depth,
 	# so it isn't tied to how many <group> levels the feed happens to nest today.
 	$ns = New-Object System.Xml.XmlNamespaceManager($ver.NameTable)
 	$ns.AddNamespace('zi', 'http://zero-install.sourceforge.net/2004/injector/interface')
